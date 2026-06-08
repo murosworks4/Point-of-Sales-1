@@ -1,0 +1,11 @@
+D:\Porject\Point of Sales #1\Point of Sales #1\bin\Debug\Point of Sales #1.exe.config
+D:\Porject\Point of Sales #1\Point of Sales #1\bin\Debug\Point of Sales #1.exe
+D:\Porject\Point of Sales #1\Point of Sales #1\bin\Debug\Point of Sales #1.pdb
+D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point of Sales #1.csproj.AssemblyReference.cache
+D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point_of_Sales__1.Form1.resources
+D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point_of_Sales__1.Properties.Resources.resources
+D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point of Sales #1.csproj.GenerateResource.cache
+D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point of Sales #1.csproj.CoreCompileInputs.cache
+D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point of Sales #1.exe
+D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point of Sales #1.pdb
+D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point_of_Sales__1.FormHome.resources
