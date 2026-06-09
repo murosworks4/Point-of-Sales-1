@@ -9,3 +9,10 @@ D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point of Sales #1.cspro
 D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point of Sales #1.exe
 D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point of Sales #1.pdb
 D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point_of_Sales__1.FormHome.resources
+D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point_of_Sales__1.FrmUsers.resources
+D:\Porject\Point of Sales #1\Point of Sales #1\bin\Debug\MySql.Data.dll
+D:\Porject\Point of Sales #1\Point of Sales #1\bin\Debug\System.Memory.dll
+D:\Porject\Point of Sales #1\Point of Sales #1\bin\Debug\System.Numerics.Vectors.dll
+D:\Porject\Point of Sales #1\Point of Sales #1\bin\Debug\MySql.Data.xml
+D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point of.178B608B.Up2Date
+D:\Porject\Point of Sales #1\Point of Sales #1\obj\Debug\Point_of_Sales__1.FrmRegister.resources

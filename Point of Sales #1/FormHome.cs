@@ -40,5 +40,26 @@ namespace Point_of_Sales__1
             frm.ShowDialog();
             this.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmUsers frm = new FrmUsers();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmRegister frm = new FrmRegister();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

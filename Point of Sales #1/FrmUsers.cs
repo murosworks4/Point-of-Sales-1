@@ -16,5 +16,25 @@ namespace Point_of_Sales__1
         {
             InitializeComponent();
         }
+
+        private void FrmUsers_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
