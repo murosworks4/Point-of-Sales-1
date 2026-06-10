@@ -40,7 +40,7 @@
             this.btsSave = new System.Windows.Forms.Button();
             this.tbLname = new System.Windows.Forms.TextBox();
             this.tbHomeAdd = new System.Windows.Forms.TextBox();
-            this.tbUsers = new System.Windows.Forms.TextBox();
+            this.tbUsername = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.tbEmailAdd = new System.Windows.Forms.TextBox();
             this.tbMname = new System.Windows.Forms.TextBox();
@@ -69,7 +69,7 @@
             this.panel1.Controls.Add(this.btsSave);
             this.panel1.Controls.Add(this.tbLname);
             this.panel1.Controls.Add(this.tbHomeAdd);
-            this.panel1.Controls.Add(this.tbUsers);
+            this.panel1.Controls.Add(this.tbUsername);
             this.panel1.Controls.Add(this.tbPassword);
             this.panel1.Controls.Add(this.tbEmailAdd);
             this.panel1.Controls.Add(this.tbMname);
@@ -79,6 +79,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(615, 992);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label8
             // 
@@ -181,6 +182,7 @@
             this.btsSave.TabIndex = 8;
             this.btsSave.Text = " Save";
             this.btsSave.UseVisualStyleBackColor = false;
+            this.btsSave.Click += new System.EventHandler(this.btsSave_Click);
             // 
             // tbLname
             // 
@@ -200,14 +202,15 @@
             this.tbHomeAdd.Size = new System.Drawing.Size(499, 36);
             this.tbHomeAdd.TabIndex = 6;
             // 
-            // tbUsers
+            // tbUsername
             // 
-            this.tbUsers.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUsers.Location = new System.Drawing.Point(43, 634);
-            this.tbUsers.Multiline = true;
-            this.tbUsers.Name = "tbUsers";
-            this.tbUsers.Size = new System.Drawing.Size(499, 36);
-            this.tbUsers.TabIndex = 5;
+            this.tbUsername.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsername.Location = new System.Drawing.Point(43, 634);
+            this.tbUsername.Multiline = true;
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(499, 36);
+            this.tbUsername.TabIndex = 5;
+            this.tbUsername.TextChanged += new System.EventHandler(this.tbUsername_TextChanged);
             // 
             // tbPassword
             // 
@@ -257,12 +260,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Bisque;
-            this.panel2.Controls.Add(this.btnDeactivate);
-            this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.dgvUsers);
             this.panel2.Location = new System.Drawing.Point(642, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1258, 992);
+            this.panel2.Size = new System.Drawing.Size(1258, 841);
             this.panel2.TabIndex = 1;
             // 
             // btnDeactivate
@@ -270,33 +271,39 @@
             this.btnDeactivate.BackColor = System.Drawing.Color.Red;
             this.btnDeactivate.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeactivate.ForeColor = System.Drawing.Color.Black;
-            this.btnDeactivate.Location = new System.Drawing.Point(950, 844);
+            this.btnDeactivate.Location = new System.Drawing.Point(1638, 887);
             this.btnDeactivate.Name = "btnDeactivate";
             this.btnDeactivate.Size = new System.Drawing.Size(262, 80);
             this.btnDeactivate.TabIndex = 10;
             this.btnDeactivate.Text = " Deactivate";
             this.btnDeactivate.UseVisualStyleBackColor = false;
+            this.btnDeactivate.Click += new System.EventHandler(this.btnDeactivate_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Bisque;
             this.btnUpdate.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.Location = new System.Drawing.Point(644, 844);
+            this.btnUpdate.Location = new System.Drawing.Point(1343, 887);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(262, 80);
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = " Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // dgvUsers
             // 
+            this.dgvUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(43, 18);
+            this.dgvUsers.Location = new System.Drawing.Point(0, 0);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.RowTemplate.Height = 23;
-            this.dgvUsers.Size = new System.Drawing.Size(1169, 784);
+            this.dgvUsers.Size = new System.Drawing.Size(1258, 841);
             this.dgvUsers.TabIndex = 0;
+            this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
             // 
             // FrmUsers
             // 
@@ -304,7 +311,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Point_of_Sales__1.Properties.Resources.ChatGPT_Image_Jun_9__2026__10_31_13_AM;
             this.ClientSize = new System.Drawing.Size(1924, 1024);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnDeactivate);
             this.Controls.Add(this.panel1);
             this.Name = "FrmUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -326,7 +335,7 @@
         private System.Windows.Forms.DateTimePicker dtpBirthDate;
         private System.Windows.Forms.TextBox tbLname;
         private System.Windows.Forms.TextBox tbHomeAdd;
-        private System.Windows.Forms.TextBox tbUsers;
+        private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.TextBox tbEmailAdd;
         private System.Windows.Forms.TextBox tbMname;
